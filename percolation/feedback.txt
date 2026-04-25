@@ -1,0 +1,54 @@
+Programming Assignment 1: Percolation
+
+
+Answer these questions after you implement your solution.
+
+/* *****************************************************************************
+ *  What computer science and programming background do you have?
+ *  Check all that apply.
+ **************************************************************************** */
+ [ ]  COS 126
+ [ ]  COS 217 
+ [ ]  COS 226 (started, but did not complete)
+ [ ]  ECE 115
+ [ ]  AP Computer Science A
+ [ ]  AP Computer Science Principles 
+ [ ]  Passed COS placement exam
+ [ ]  Algorithms, Part I on Coursera
+ [ ]  Algorithms, Part II on Coursera
+ [ ]  Competed in programming contests
+
+
+/* *****************************************************************************
+ *  What Java programming environment are you using?
+ *  Check all that apply.
+ **************************************************************************** */
+ [ ]  macOS
+ [ ]  Windows
+ [ ]  Linux
+ [ ]  IntelliJ
+ [ ]  Eclipse
+ [ ]  Visual Studio
+ [ ]  Other (please specify) __________________________________
+
+
+/* *****************************************************************************
+ * What is your assessment of the assignment? Was it helpful? Was it fun?
+ * Give it a grade from 1 (bad) to 5 (good)
+ **************************************************************************** */
+
+
+
+/* *****************************************************************************
+ * How did you use AI to complete this assignment? Remember that AI isn't
+ * banned, it's only discouraged, so we won't penalize you in any way for
+ * any kind of AI usage.
+ **************************************************************************** */
+
+
+
+/* *****************************************************************************
+ *  List any other comments here. Feel free to provide any feedback   
+ *  on how much you learned from doing the assignment, and whether    
+ *  you enjoyed doing it.                                             
+ **************************************************************************** */
