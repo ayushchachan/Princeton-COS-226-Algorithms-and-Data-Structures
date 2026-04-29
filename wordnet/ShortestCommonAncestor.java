@@ -7,9 +7,11 @@ import edu.princeton.cs.algs4.Digraph;
  **************************************************************************** */
 public class ShortestCommonAncestor {
 
+    private Digraph G;          // the directed graph
+
     // constructor takes a rooted DAG as argument
     public ShortestCommonAncestor(Digraph G) {
-
+        this.G = G;
     }
 
     // length of shortest ancestral path between v and w

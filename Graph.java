@@ -1,45 +1,65 @@
-/**
- * @author Ayush Chachan
- */
-public interface Graph<V, E> {
-    int numVertices();      // Returns the number of vertices of the graph.
+import java.util.ArrayList;
+import java.util.List;
 
-    Iterable<Vertex<V>> vertices();    // Returns an iteration of all the vertices of the graph.
+import edu.princeton.cs.algs4.In;
 
-    int numEdges();    // Returns the number of edges of the graph.
+public class Graph {
 
-    Iterable<Edge<E>> edges();    // Returns an iteration of all the edges of the graph.
+    private final int V;                // number of vertices
+    private int E;                      // number of edges
+    private List<Integer>[] adj;        // adjacency lists
 
-    Edge<E> getEdge(Vertex<V> u, Vertex<V> v);      // Returns the edge from vertex u to vertex v, if one exists;
-    //otherwise return null. For an undirected graph, there is no
-    //difference between getEdge(u, v) and getEdge(v, u).
+    // @SuppressWarnings("unchecked") // Suppress warning for the cast
+    public Graph(int V) {
+        this.V = V;
+        this.E = 0;
+        this.adj = (List<Integer>[]) new ArrayList[V];              // Create the array as a raw ArrayList array, then cast
 
-    Vertex<V>[] endVertices(Edge<E> e);     // Returns an array containing the two endpoint vertices of
-    //edge e. If the graph is directed, the first vertex is the origin
-    //and the second is the destination.
+        for (int i = 0; i < adj.length; i++) {
+            adj[i] = new ArrayList<>();
+        }
+    }
 
-    Vertex<V> opposite(Vertex<V> v, Edge<E> e);     // For edge e incident to vertex v, returns the other vertex of
-    //the edge; an error occurs if e is not incident to v.
+    public Graph(In in) {
+        this(in.readInt());
+        int E = in.readInt();
 
-    int outDegree(Vertex<V> v);    // Returns the number of outgoing edges from vertex v.
+        for (int i = 0; i < E; i++) {
+            // vertex v-->w
+            int v = in.readInt();
+            int w = in.readInt();
+            addEdge(v, w);
+        }
+    }
 
-    int inDegree(Vertex<V> v);      // Returns the number of incoming edges to vertex v. For
-    //an undirected graph, this returns the same value as does
-    //outDegree(v).
+    public int V() {
+        return this.V;
+    }
 
-    Iterable<Edge<E>> outgoingEdges(Vertex<V> v);   // Returns an iteration of all outgoing edges from vertex v.
+    public int E() {
+        return this.E;
+    }
 
-    Iterable<Edge<E>> incomingEdges(Vertex<V> v);   // Returns an iteration of all incoming edges to vertex v. For
-    //an undirected graph, this returns the same collection as
-    //does outgoingEdges(v).
+    public void addEdge(int v, int w) {
+        adj[v].add(w);
+        adj[w].add(v);
+        E++;
+    }
 
-    Vertex<V> insertVertex(V x);    // Creates and returns a new Vertex storing element x.
+    public Iterable<Integer> adj(int v) {
+        return adj[v];
+    }
 
-    Edge<E> insertEdge(Vertex<V> u, Vertex<V> v, E x);  // Creates and returns a new Edge from vertex u to vertex v,
-    // storing element x; an error occurs if there already exists an
-    //edge from u to v.
+    @Override
+    public String toString() {
+        StringBuilder s = new StringBuilder();
+        s.append(V + " vertices, " + E + " edges\n");
 
-    void removeVertex(Vertex<V> v);    // Removes vertex v and all its incident edges from the graph.
+        for (int u = 0; u < adj.length; u++) {
+            s.append(u + ": " + adj[u].toString() + "\n");
+        }
 
-    void removeEdge(Edge<E> e);    // Removes edge e from the graph.
+        return s.toString();
+    }
+    
 }

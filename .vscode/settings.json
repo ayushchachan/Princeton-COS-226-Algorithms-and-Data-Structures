@@ -1,0 +1,17 @@
+{
+    "java.project.sourcePaths": [
+        ".",
+        "collinear",
+        "Concurrency/src",
+        "integerArithmetic/src",
+        "kdtree",
+        "nbody",
+        "perceptron/src",
+        "percolation",
+        "queues",
+        "wordnet"
+    ],
+    "java.project.referencedLibraries": [
+        "algs4.jar"
+    ]
+}

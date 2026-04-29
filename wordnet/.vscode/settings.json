@@ -1,0 +1,10 @@
+{
+    "java.format.settings.url": ".vscode/java-formatter.xml",
+    "java.project.sourcePaths": [
+        ".",
+        ".idea/fileTemplates/includes"
+    ],
+    "java.project.referencedLibraries": [
+        "/home/ayush-chachan/Documents/Ayush_Chachan/Princeton-COS-226-Algorithms-and-Data-Structures/algs4.jar"
+    ]
+}
